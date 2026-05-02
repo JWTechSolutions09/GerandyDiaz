@@ -114,17 +114,20 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-neutral-950/50 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all duration-500 hover:backdrop-blur-2xl">
-<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto ease-in-out duration-600">
-<div class="text-2xl font-serif uppercase tracking-[0.2em] text-neutral-50">Gerandy Diaz</div>
-<div class="hidden md:flex gap-12 items-center">
-<a class="font-serif italic tracking-wide text-neutral-400 hover:text-neutral-100 transition-colors" href="#">Narrative</a>
-<a class="font-serif italic tracking-wide text-neutral-400 hover:text-neutral-100 transition-colors" href="#">Showcase</a>
-<button class="bg-tertiary text-on-tertiary px-8 py-3 font-label-caps text-label-caps uppercase transition-all duration-300 hover:bg-on-tertiary-container hover:text-tertiary">
-                    Book Consultation
-                </button>
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-[#121417]/40 backdrop-blur-[30px] border-b border-slate-200/10 transition-all duration-600 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto w-full">
+<div class="text-xl font-bold tracking-tighter text-white">Gerandy Diaz</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-amber-400 border-b border-amber-400 pb-1" href="#">Narrative</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Showcase</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Architectural</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">About</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Contact</a>
 </div>
+<button class="bg-tertiary text-on-tertiary px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary/90 transition-colors">
+                Book Consultation
+            </button>
 </div>
 </nav>
 <main class="min-h-screen flex flex-col md:flex-row pt-[92px]">

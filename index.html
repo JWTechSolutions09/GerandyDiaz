@@ -1,35 +1,334 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gerandy Diaz | Sitio Oficial</title>
-  <style>
-    :root { color-scheme: dark; }
-    body { font-family: Arial, sans-serif; margin: 0; background: #121417; color: #e2e2e3; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px; }
-    h1 { margin: 0 0 12px; font-size: 2rem; }
-    p { color: #c6c6ca; }
-    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 24px; }
-    a { display: block; padding: 14px 16px; border: 1px solid #45474a; color: #e9c176; text-decoration: none; }
-    a:hover { border-color: #e9c176; }
-  </style>
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:wght@400;700&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121415;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e9c176;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#334b60",
+                      "surface-container-highest": "#333536",
+                      "primary": "#c6c6ca",
+                      "background": "#121415",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary": "#412d00",
+                      "on-secondary-container": "#a2bbd4",
+                      "secondary-fixed-dim": "#b0c9e3",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "primary-fixed-dim": "#c6c6ca",
+                      "inverse-surface": "#e2e2e3",
+                      "surface-container-high": "#282a2b",
+                      "tertiary": "#e9c176",
+                      "outline": "#8f9094",
+                      "outline-variant": "#45474a",
+                      "secondary-fixed": "#cce5ff",
+                      "primary-container": "#121417",
+                      "tertiary-container": "#1d1200",
+                      "on-surface-variant": "#c6c6ca",
+                      "primary-fixed": "#e2e2e6",
+                      "secondary": "#b0c9e3",
+                      "on-secondary": "#1a3347",
+                      "on-secondary-fixed": "#011d31",
+                      "on-background": "#e2e2e3",
+                      "on-primary": "#2f3034",
+                      "inverse-on-surface": "#2f3132",
+                      "surface": "#121415",
+                      "surface-dim": "#121415",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#9b7937",
+                      "on-secondary-fixed-variant": "#31495e",
+                      "on-error": "#690005",
+                      "on-primary-fixed-variant": "#45474a",
+                      "surface-tint": "#c6c6ca",
+                      "surface-container-low": "#1a1c1d",
+                      "on-surface": "#e2e2e3",
+                      "surface-variant": "#333536",
+                      "on-primary-fixed": "#1a1c1f",
+                      "surface-container": "#1e2021",
+                      "tertiary-fixed": "#ffdea5",
+                      "inverse-primary": "#5d5e62",
+                      "on-primary-container": "#7d7e82",
+                      "surface-bright": "#38393a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "40px",
+                      "gutter": "32px",
+                      "stack-sm": "16px",
+                      "section-padding": "120px",
+                      "unit": "8px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "headline-md": ["Noto Serif"],
+                      "display-xl": ["Noto Serif"],
+                      "label-caps": ["Space Grotesk"],
+                      "headline-lg": ["Noto Serif"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
 </head>
-<body>
-  <main class="wrap">
-    <h1>Gerandy Diaz</h1>
-    <p>Sitio listo para despliegue en GitHub Pages y Cloudflare Pages.</p>
-    <section class="grid">
-      <a href="gerandy_diaz_curated_showcase/code.html">Curated Showcase</a>
-      <a href="gerandy_diaz_showcase_gallery/code.html">Showcase Gallery</a>
-      <a href="gerandy_diaz_architectural_philosophy/code.html">Architectural Philosophy</a>
-      <a href="about_gerandy_diaz_the_philosophy/code.html">About</a>
-      <a href="gerandy_diaz_contacto_privado/code.html">Contacto Privado</a>
-      <a href="agendar_consulta_gerandy_diaz/code.html">Agendar Consulta</a>
-      <a href="gerandy_diaz_architectural_narrative_1/code.html">Narrative I</a>
-      <a href="gerandy_diaz_architectural_narrative_2/code.html">Narrative II</a>
-      <a href="gerandy_diaz_architectural_narrative_3/code.html">Narrative III</a>
-    </section>
-  </main>
-</body>
-</html>
+<body class="bg-background text-on-background selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-[#121417]/40 backdrop-blur-[30px] border-b border-slate-200/10 transition-all duration-600 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto w-full">
+<div class="text-xl font-bold tracking-tighter text-white">Gerandy Diaz</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-amber-400 border-b border-amber-400 pb-1" href="#">Narrative</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Showcase</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Architectural</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">About</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="bg-tertiary text-on-tertiary px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary/90 transition-colors">
+                Book Consultation
+            </button>
+</div>
+</nav>
+<!-- Section 1: Hero -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-[0.4]" data-alt="A low-angle, cinematic view of a towering, ultra-modern skyscraper reaching into a twilight sky. The glass facade reflects the deep blue and purple hues of the horizon, while warm architectural lighting defines the building's geometric edges. The overall aesthetic is dark and sophisticated, emphasizing luxury and grand architectural ambition through a high-contrast digital photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrIt4Ol9RKkY41VJOyqwlRFFp19O3WFQ8Pi6gXz0CJqYnRGFUePBPcA5QPF3EkTFtqM8gCKD8rec7RwJpt6tfSdV0JJ5Db4ig_1AJDz89NpFPn_wF2S5zQDRETPFIbiUH1JsDxC2CDTXDK68bW0bE0GKEvwz1HGNi7qCB9kSSzLj9Ee1UDNJIVw7sYXpSAuY08XVSPxvzKI2zhO5UeUoEAjWZnCkNtd7NmmZHg911sqBbWl3eZWPkvfHPxgxNGJh7GBCQgO6BbBzA"/>
+</div>
+<div class="relative z-10 text-center max-w-5xl px-8">
+<h1 class="font-display-xl text-display-xl text-white mb-8">
+                Gerandy Diaz: Redefiniendo el Horizonte Inmobiliario
+            </h1>
+<div class="flex flex-col items-center gap-4 animate-bounce mt-12">
+<span class="font-label-caps text-label-caps text-amber-400 uppercase">Scroll to Begin</span>
+<span class="material-symbols-outlined text-amber-400">expand_more</span>
+</div>
+</div>
+</header>
+<!-- Section 2: The Narrative -->
+<section class="relative py-section-padding space-y-[240px]">
+<!-- Chapter 1 -->
+<div class="max-w-[1440px] mx-auto px-8 grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 md:col-span-5 space-y-6">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Cap?tulo I</span>
+<h2 class="font-headline-lg text-headline-lg text-white">Finding your space in the city</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">M?s que metros cuadrados, curamos experiencias de vida. En el coraz?n de la metr?polis, cada rinc?n cuenta una historia de ambici?n y sofisticaci?n.</p>
+</div>
+<div class="col-span-12 md:col-span-7 relative group">
+<div class="aspect-[16/10] overflow-hidden border border-white/10 glass-morphism">
+<img class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" data-alt="A high-end modern residential interior showcasing a minimalist living room with floor-to-ceiling windows overlooking a panoramic city skyline. The room features dark walnut flooring, sleek Italian leather furniture, and a subtle golden ambient glow from hidden LED strips. The composition is clean and architectural, highlighting the seamless transition between luxury indoor living and the urban landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Am_WA18LGbWqhptOdTrFbtpFmwtgDFPi67FUB8DCWPpwheUjj0KJ3-xxbU5tRKZ2m43goYAlMOkwV0zrjvfl0pNrdOqAEoJwxYebGI9nRBHYxQ7pmisO1dsHDFy1E4qL7530LuZfwI8lFEvEbU1Bwqybpc0BOjuutyD98KpNfYPEwNc9D1PB5ONAYFTsJPboAFYIUx1xa56s-xjAjyEaQW-dZiQvrLYmXV3verOLkK-8NaZ7WJM1SGKglUYTVEqoYNuMsNwRVI0"/>
+</div>
+</div>
+</div>
+<!-- Chapter 2 -->
+<div class="max-w-[1440px] mx-auto px-8 grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 md:col-span-7 order-2 md:order-1 relative group">
+<div class="aspect-[16/10] overflow-hidden border border-white/10 glass-morphism">
+<img class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" data-alt="A breathtaking view of a luxury penthouse terrace at dusk. The scene features a sleek infinity pool that blends into the city lights below, surrounded by modern outdoor lounging furniture and sculptural greenery. The lighting is low-key and atmospheric, with the warm golden tones of the sunset reflecting off glass surfaces, creating an aura of exclusive tranquility and modern elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnsoGXrEAWYSyT7Vuf8_KhK1hEkKPdFxBfS7AVDGyU0eWoXZtHzeBHLjUxubnxyo6_THecLl_DxOLtOuRw-ZeAleifiH6pWYWnU3L9cjDjEW8jnd5teIvN4staNcW05j5JOm42RyUvcrUC7RMYR1GQpRSHSMBYQLXuadwCZ3sjOx4G6q6EU2t6hP7xrGMrgT_MvWptl34_C1HzDVzm2Y12AkZrEyehLSoMSLRKfHM88pxIVZp6_fPcc5HloRQLxwqEc6GeAvN2x0Y"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 order-1 md:order-2 space-y-6 md:pl-12">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Cap?tulo II</span>
+<h2 class="font-headline-lg text-headline-lg text-white">Arquitectura que Respira</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Seleccionamos propiedades donde el dise?o no es solo est?tico, sino una funci?n del bienestar y el ?xito. Estructuras que desaf?an el tiempo y definen el estatus.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: Showcase -->
+<section class="bg-surface-container-low py-section-padding">
+<div class="max-w-[1440px] mx-auto px-8 mb-16 flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase block mb-4">Portfolio</span>
+<h2 class="font-headline-lg text-headline-lg text-white">Curated Showcase</h2>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="p-4 border border-white/10 hover:border-tertiary transition-colors">
+<span class="material-symbols-outlined text-white">west</span>
+</button>
+<button class="p-4 border border-white/10 hover:border-tertiary transition-colors">
+<span class="material-symbols-outlined text-white">east</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-[1440px] mx-auto">
+<!-- Property Card 1 -->
+<div class="group relative overflow-hidden glass-morphism border border-white/5">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A hyper-modern luxury villa with a striking cantilevered roof and expansive glass walls. The architecture is defined by clean white lines and natural stone textures, set against a backdrop of manicured tropical gardens and a deep blue pool. The lighting is bright and airy, emphasizing the geometric precision and premium materials of the build." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByuG3IhClcFFFYyowHKNwIt3L_ZNSFxDEHELKY6oT8m3sdltBN494ukla6dXlcUKSH8Er4SRdpiClgLUohaNcAbpUHkhv0hOCsHx7aEHG6AwfEzfXUXM1kQXKQ5xC78tyNaPt4eB04dWEXXUsCSM9VPtEHDgdZ7AtMHHaAiH1qSIFxP98OBMKcS3qt9j898qCc_uDH8A7_ZlhqFOmpsUHJiJ9N2fKqdm9ahYj8Tnw2Ee3q7pCvWy-a2AepXKEcwPxmS3zrleNvojA"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<p class="font-label-caps text-label-caps text-tertiary mb-2">MIAMI BEACH</p>
+<h3 class="font-headline-md text-headline-md text-white mb-4">The Azure Horizon</h3>
+<div class="flex justify-between items-center border-t border-white/10 pt-4">
+<span class="font-body-md text-white">$4.2M</span>
+<span class="font-label-caps text-[10px] text-white/50">6,500 SQFT</span>
+</div>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group relative overflow-hidden glass-morphism border border-white/5">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dark, moody architectural shot of a modern brutalist-inspired mansion. The facade features textured raw concrete and blackened steel frames, with large glass panels revealing a warm, lit interior gallery. The surrounding landscape consists of tall pine trees, and the lighting is dramatic, highlighting the building's powerful silhouette against a misty evening sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCj6BuVotW1Jc02kY3u6d4Z0WmkQQ0BcVQzq1Lsorv3fzl-XK0zAFw48LABvnZlVufivBIBO5-aX0eCdzOVCPs_aUIqAVUIKAr02YusFeRhxe3MyKAtsP97Pv6G3WtSc6IJYIgMCSQMRVAGqnE838Z3BgqWnpvUUKUzd1lhodqFMxpehtQozCTgKE6ELoR1-hjWI1qeD4vk7t4UvguCZHHjprIHRnOlE7VixyLm216CZtlR4GSUwzOecHfj3DlWyoCDOFp9mTES4M"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<p class="font-label-caps text-label-caps text-tertiary mb-2">BRICKELL DISTRICT</p>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Steel &amp; Stone Manor</h3>
+<div class="flex justify-between items-center border-t border-white/10 pt-4">
+<span class="font-body-md text-white">$2.8M</span>
+<span class="font-label-caps text-[10px] text-white/50">4,200 SQFT</span>
+</div>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group relative overflow-hidden glass-morphism border border-white/5">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An ultra-luxury modern house at sunset, featuring multi-level terraces and a sleek glass-walled exterior. The building is illuminated by warm interior lights that contrast with the cool blue tones of the dusk sky. A minimalist garden with sculptural trees surrounds the property, creating a sense of sophisticated privacy and high-end living in a contemporary architectural setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsLTc_rwQwLW8lkKjgDV5p5KIenANjYpbsz2T1N_dkmcLRm6pjPVjrxt7JyQx33Hjc5GSgHDo71B9GlwnkS6iHDmYa06_1qjSP8GoOzPn4CvGP2Zgu9UjATITfv-mbR7xKtVlVY0EUmuXAfU8pDepKgFhCCamjlyICeXE8ViaG47q3z7yzfUmgpE9--OnJQJImBESSOgdA1u_MnVvDl5y9nKgLGfMu_GXEapOOW33_Uy9RbH8L_1RoGCz_zfnGKYcbCVP6FY9nq0"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<p class="font-label-caps text-label-caps text-tertiary mb-2">CORAL GABLES</p>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Emerald Enclave</h3>
+<div class="flex justify-between items-center border-t border-white/10 pt-4">
+<span class="font-body-md text-white">$5.5M</span>
+<span class="font-label-caps text-[10px] text-white/50">8,900 SQFT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: About Gerandy -->
+<section class="py-section-padding max-w-[1440px] mx-auto px-8 overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 relative">
+<div class="relative z-10 border border-tertiary p-4">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A professional portrait of a male real estate advisor in his 40s, wearing a tailored charcoal suit and a crisp white shirt. He stands in a bright, modern architectural office with high ceilings and minimalist decor. The lighting is soft and flattering, casting a sophisticated and trustworthy aura. The overall style is clean and professional, using a shallow depth of field to focus on the person." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdWJI29tp5dzFwNV0HR2Z7OzuMo2lkYEhgvFa7a4SmYIU7Pukg6VKmXOLsCLa63CSVeH6MCz0jyoWZ7mSYG4DrNKjSvWXooOwBVLDgVfQikb8ty0nPuAedibM8W1Gy8FGdaFlgXzzbmx6YZyerZaFSwqZu8cr9L3k7bnmtyr6lhhr8m_a-yrEQZjoTRug3_os6cMZA8vl63ZyLomA__c127Yip9J141b0YzWoWGVhUO0jzp6umh7NT7ovfyjZg9i-VHhVn6hK7Wq4"/>
+</div>
+<div class="absolute -top-10 -left-10 text-[180px] font-display-xl text-white/5 leading-none select-none">GD</div>
+</div>
+<div class="md:col-span-7 space-y-8">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-4">The Advisor</span>
+<h2 class="font-headline-lg text-headline-lg text-white">Gerandy Diaz</h2>
+<p class="font-headline-md text-headline-md text-white/60 italic mt-2">Transformando visiones en residencias.</p>
+</div>
+<div class="space-y-6 max-w-2xl">
+<p class="font-body-lg text-body-lg text-on-surface-variant">Con m?s de una d?cada de experiencia en el mercado inmobiliario de lujo, Gerandy Diaz no solo vende propiedades; negocia legados. Su enfoque combina un profundo conocimiento arquitect?nico con una visi?n estrat?gica del mercado global.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Cada cliente recibe una asesor?a personalizada donde la discreci?n, la precisi?n t?cnica y el acceso a inventarios exclusivos son los pilares fundamentales del servicio.</p>
+</div>
+<div class="flex gap-12 pt-8">
+<div>
+<p class="font-display-xl text-[48px] text-white">150+</p>
+<p class="font-label-caps text-label-caps text-tertiary uppercase">Closings</p>
+</div>
+<div>
+<p class="font-display-xl text-[48px] text-white">12</p>
+<p class="font-label-caps text-label-caps text-tertiary uppercase">Years Exp.</p>
+</div>
+<div>
+<p class="font-display-xl text-[48px] text-white">$500M+</p>
+<p class="font-label-caps text-label-caps text-tertiary uppercase">Volume</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Contact / Footer -->
+<footer class="bg-[#121417] border-t border-slate-200/10 pt-24">
+<div class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-16 pb-24">
+<div class="md:col-span-5 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-white">Start your journey.</h2>
+<p class="font-body-lg text-on-surface-variant">?Listo para encontrar su pr?ximo espacio? Complete el formulario y nuestro equipo se pondr? en contacto en las pr?ximas 24 horas para una consulta privada.</p>
+<div class="space-y-4 pt-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">mail</span>
+<span class="font-body-md text-white">concierge@gerandydiaz.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">location_on</span>
+<span class="font-body-md text-white">Brickell Ave, Suite 1200, Miami, FL</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7">
+<form class="space-y-8 glass-morphism p-8 border border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-tertiary uppercase">Nombre Completo</label>
+<input class="w-full bg-transparent border-b border-white/10 focus:border-tertiary transition-colors py-3 outline-none text-white font-body-md" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-tertiary uppercase">Email</label>
+<input class="w-full bg-transparent border-b border-white/10 focus:border-tertiary transition-colors py-3 outline-none text-white font-body-md" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-tertiary uppercase">Tipo de Inter?s</label>
+<select class="w-full bg-transparent border-b border-white/10 focus:border-tertiary transition-colors py-3 outline-none text-white font-body-md appearance-none">
+<option class="bg-background">Adquisici?n Residencial</option>
+<option class="bg-background">Inversi?n Comercial</option>
+<option class="bg-background">Consultor?a Arquitect?nica</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-tertiary uppercase">Mensaje</label>
+<textarea class="w-full bg-transparent border-b border-white/10 focus:border-tertiary transition-colors py-3 outline-none text-white font-body-md h-32 resize-none" placeholder="Cu?ntenos sobre su visi?n..."></textarea>
+</div>
+<button class="w-full bg-tertiary text-on-tertiary py-5 font-label-caps text-label-caps tracking-[0.2em] uppercase hover:bg-tertiary/90 transition-all">
+                        Enviar Solicitud Privada
+                    </button>
+</form>
+</div>
+</div>
+<!-- Footer Bottom -->
+<div class="border-t border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-[1440px] mx-auto w-full">
+<div class="text-lg font-bold text-white mb-4 md:mb-0">Gerandy Diaz</div>
+<div class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500 text-center">
+                    ? 2024 Gerandy Diaz. Digital Architectural Real Estate.
+                </div>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500 hover:text-amber-400 transition-colors" href="#">Privacy Policy</a>
+<a class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500 hover:text-amber-400 transition-colors" href="#">Terms of Service</a>
+<a class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500 hover:text-amber-400 transition-colors" href="#">Licensing</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="./site-router.js"></script>
+</body></html>
