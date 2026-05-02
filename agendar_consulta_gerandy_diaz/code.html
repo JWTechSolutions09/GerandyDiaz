@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="es"><head>
+<html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -117,7 +117,13 @@
 <!-- TopNavBar Component -->
 <nav class="fixed top-0 w-full z-50 bg-[#121417]/40 backdrop-blur-[30px] border-b border-slate-200/10 transition-all duration-600 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]">
 <div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto w-full">
-<div class="text-xl font-bold tracking-tighter text-white">Gerandy Diaz</div>
+<div class="flex items-center gap-3 min-w-0">
+<img src="https://www.centrerealtygroup.com/favicon.ico" alt="Centre Realty Group" class="w-6 h-6 shrink-0 rounded-sm"/>
+<div class="min-w-0">
+<div class="text-xl font-bold tracking-tighter text-white leading-tight truncate">Gerandy Diaz</div>
+<div class="text-[10px] uppercase tracking-[0.18em] text-white/60 truncate">Centre Realty Group Realtor</div>
+</div>
+</div>
 <div class="hidden md:flex items-center space-x-12">
 <a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-amber-400 border-b border-amber-400 pb-1" href="#">Narrative</a>
 <a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Showcase</a>
@@ -153,56 +159,56 @@
 <section class="w-full md:w-1/2 p-8 md:p-24 flex items-center justify-center bg-surface-dim">
 <div class="w-full max-w-xl">
 <div class="mb-12">
-<h1 class="font-headline-lg text-headline-lg mb-4 text-on-surface">Agendar Consulta</h1>
-<p class="font-body-lg text-on-surface-variant">Inicie el proceso de curaduría de su próxima propiedad icónica. Nuestro equipo se pondrá en contacto para una sesión privada.</p>
+<h1 class="font-headline-lg text-headline-lg mb-4 text-on-surface">Schedule Consultation</h1>
+<p class="font-body-lg text-on-surface-variant">Begin the curation process for your next iconic property. Our team will contact you for a private session. We provide services in all languages - schedule your appointment today.</p>
 </div>
 <form class="space-y-10">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 <div class="relative group">
-<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300" id="fullname" name="fullname" placeholder="Nombre Completo" type="text"/>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300" id="fullname" name="fullname" placeholder="Full Name" type="text"/>
 </div>
 <div class="relative group">
-<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300" id="email" name="email" placeholder="Correo Electrónico" type="email"/>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300" id="email" name="email" placeholder="Email Address" type="email"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 <div class="relative group">
-<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300" id="phone" name="phone" placeholder="Teléfono" type="tel"/>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300" id="phone" name="phone" placeholder="Phone Number" type="tel"/>
 </div>
 <div class="relative group">
 <select class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300 appearance-none cursor-pointer" id="interest" name="interest">
-<option class="bg-surface-container" disabled="" selected="" value="">Tipo de Interés</option>
+<option class="bg-surface-container" disabled="" selected="" value="">Interest Type</option>
 <option class="bg-surface-container text-on-surface" value="buying">Adquisición / Compra</option>
 <option class="bg-surface-container text-on-surface" value="selling">Venta Estratégica</option>
 <option class="bg-surface-container text-on-surface" value="investment">Inversión Patrimonial</option>
-<option class="bg-surface-container text-on-surface" value="development">Desarrollo a Medida</option>
+<option class="bg-surface-container text-on-surface" value="development">Custom Development</option>
 </select>
 <span class="material-symbols-outlined absolute right-0 bottom-3 text-on-surface-variant pointer-events-none">expand_more</span>
 </div>
 </div>
 <div class="space-y-4">
-<label class="font-label-caps text-label-caps text-tertiary block">Preferencias de Agenda</label>
+<label class="font-label-caps text-label-caps text-tertiary block">Schedule Preferences</label>
 <div class="grid grid-cols-3 gap-4">
 <div class="border border-outline-variant p-4 text-center cursor-pointer hover:border-tertiary transition-all group">
 <span class="font-label-caps text-[10px] text-on-surface-variant block mb-1 group-hover:text-tertiary">MAÑANA</span>
 <span class="font-body-md text-on-surface">09:00 - 12:00</span>
 </div>
 <div class="border border-tertiary p-4 text-center cursor-pointer bg-tertiary/5 group">
-<span class="font-label-caps text-[10px] text-tertiary block mb-1">TARDE</span>
+<span class="font-label-caps text-[10px] text-tertiary block mb-1">AFTERNOON</span>
 <span class="font-body-md text-on-surface">14:00 - 17:00</span>
 </div>
 <div class="border border-outline-variant p-4 text-center cursor-pointer hover:border-tertiary transition-all group">
-<span class="font-label-caps text-[10px] text-on-surface-variant block mb-1 group-hover:text-tertiary">NOCHE</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-1 group-hover:text-tertiary">EVENING</span>
 <span class="font-body-md text-on-surface">18:00 - 20:00</span>
 </div>
 </div>
 </div>
 <div class="relative group">
-<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300 resize-none" id="vision" name="vision" placeholder="Su Visión (Mensaje)" rows="3"></textarea>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300 resize-none" id="vision" name="vision" placeholder="Su Visión (Message)" rows="3"></textarea>
 </div>
 <div class="pt-8">
 <button class="w-full bg-tertiary text-on-tertiary py-5 px-10 font-label-caps text-label-caps tracking-widest uppercase transition-all duration-500 hover:bg-tertiary-fixed hover:shadow-[0_0_40px_rgba(233,193,118,0.2)]" type="submit">
-                            Confirmar Solicitud de Consulta
+                            Confirm Consultation Request
                         </button>
 <p class="mt-6 text-center font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest opacity-60">
                             Respuesta garantizada en menos de 24 horas hábiles.

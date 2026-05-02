@@ -36,6 +36,11 @@
           letter-spacing: 0.02em !important;
         }
 
+        nav .text-\\[10px\\] {
+          font-size: 9px !important;
+          letter-spacing: 0.12em !important;
+        }
+
         nav > div > button {
           padding: 0.5rem 0.75rem !important;
           font-size: 11px !important;
@@ -119,6 +124,71 @@
           color: #fff;
           border: 1px solid rgba(255, 255, 255, 0.15);
           background: rgba(255, 255, 255, 0.02);
+        }
+
+        .px-8,
+        .px-10,
+        .px-12,
+        .p-8,
+        .p-10,
+        .p-12 {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+
+        .py-\\[120px\\],
+        .py-section-padding {
+          padding-top: 4.5rem !important;
+          padding-bottom: 4.5rem !important;
+        }
+
+        .pt-24,
+        .pt-\\[92px\\],
+        .pt-\\[120px\\] {
+          padding-top: 5.5rem !important;
+        }
+
+        .grid {
+          gap: 1rem !important;
+        }
+
+        .h-screen {
+          min-height: 78vh !important;
+          height: auto !important;
+        }
+
+        .aspect-\\[16\\/10\\],
+        .aspect-\\[16\\/9\\],
+        .aspect-\\[4\\/5\\],
+        .aspect-\\[3\\/4\\] {
+          aspect-ratio: auto !important;
+        }
+
+        form .grid.grid-cols-1.md\\:grid-cols-2,
+        form .grid.grid-cols-2,
+        form .grid.grid-cols-3 {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1100px) {
+        nav > div {
+          padding-left: 1.5rem !important;
+          padding-right: 1.5rem !important;
+        }
+
+        .text-display-xl,
+        .font-display-xl {
+          font-size: clamp(2.8rem, 6.2vw, 4.4rem) !important;
+        }
+
+        .text-headline-lg {
+          font-size: clamp(2rem, 3.8vw, 2.5rem) !important;
+        }
+
+        .px-12 {
+          padding-left: 1.5rem !important;
+          padding-right: 1.5rem !important;
         }
       }
     `;
