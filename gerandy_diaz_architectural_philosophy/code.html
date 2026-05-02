@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#a2bbd4",
+                        "inverse-primary": "#5d5e62",
+                        "surface-container": "#1e2021",
+                        "secondary": "#b0c9e3",
+                        "on-primary-fixed": "#1a1c1f",
+                        "on-primary": "#2f3034",
+                        "secondary-container": "#334b60",
+                        "primary": "#c6c6ca",
+                        "on-surface": "#e2e2e3",
+                        "error": "#ffb4ab",
+                        "primary-container": "#121417",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-primary-container": "#7d7e82",
+                        "secondary-fixed-dim": "#b0c9e3",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#011d31",
+                        "surface-dim": "#121415",
+                        "on-secondary-fixed-variant": "#31495e",
+                        "tertiary-container": "#1d1200",
+                        "background": "#121415",
+                        "surface-bright": "#38393a",
+                        "outline-variant": "#45474a",
+                        "on-tertiary": "#412d00",
+                        "on-error": "#690005",
+                        "surface": "#121415",
+                        "secondary-fixed": "#cce5ff",
+                        "outline": "#8f9094",
+                        "on-secondary": "#1a3347",
+                        "on-primary-fixed-variant": "#45474a",
+                        "primary-fixed": "#e2e2e6",
+                        "on-background": "#e2e2e3",
+                        "inverse-on-surface": "#2f3132",
+                        "surface-variant": "#333536",
+                        "surface-tint": "#c6c6ca",
+                        "surface-container-lowest": "#0c0e0f",
+                        "inverse-surface": "#e2e2e3",
+                        "tertiary": "#e9c176",
+                        "tertiary-fixed": "#ffdea5",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "surface-container-highest": "#333536",
+                        "on-tertiary-fixed": "#261900",
+                        "primary-fixed-dim": "#c6c6ca",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#1a1c1d",
+                        "on-surface-variant": "#c6c6ca",
+                        "on-tertiary-container": "#9b7937",
+                        "surface-container-high": "#282a2b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "40px",
+                        "stack-sm": "16px",
+                        "gutter": "32px",
+                        "section-padding": "120px",
+                        "container-max": "1440px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Grotesk"],
+                        "display-xl": ["Noto Serif"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(18, 20, 21, 0.7);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121415;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e9c176;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-2xl border-b border-white/5 shadow-none">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-10 py-8">
+<div class="font-serif text-xl font-bold tracking-widest text-white uppercase">Gerandy Diaz</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-white/60 font-medium uppercase text-xs tracking-widest hover:text-amber-400 transition-colors duration-500" href="#">Narrative</a>
+<a class="text-white/60 font-medium uppercase text-xs tracking-widest hover:text-amber-400 transition-colors duration-500" href="#">Showcase</a>
+<a class="text-amber-500 border-b border-amber-500 pb-1 font-medium uppercase text-xs tracking-widest transition-colors duration-500" href="#">Architectural</a>
+<a class="text-white/60 font-medium uppercase text-xs tracking-widest hover:text-amber-400 transition-colors duration-500" href="#">About</a>
+<a class="text-white/60 font-medium uppercase text-xs tracking-widest hover:text-amber-400 transition-colors duration-500" href="#">Contact</a>
+</div>
+<button class="bg-tertiary text-on-tertiary-fixed px-8 py-3 font-label-caps text-label-caps rounded-none hover:bg-white transition-all duration-300 uppercase">
+                Inquire
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Architectural Abstract" class="w-full h-full object-cover scale-110" data-alt="A mesmerizing architectural close-up capturing the intersection of raw concrete and sleek structural glass under dramatic side-lighting. The image showcases deep shadows and brilliant highlights, emphasizing the tactile textures of the industrial materials. The aesthetic is monochromatic and minimalist, perfectly aligned with a luxury dark-mode design system. This high-contrast shot creates a sense of monumental scale and timeless sophistication, serving as a powerful visual anchor for a high-end architectural narrative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCgOdiU5bZsq5VS0hbrm0y87-9UuofKFCPHmvOQ_-WjLDloA0SRYHNWW-SAVC9FagKlxqrR1VApSVmforHE4nppjoaF0doYI2xrynhV7d35dCUXqABeJlFsTLzA69Iz8xPu55en-tBHNJ6A5GOCPOFqwWSegs65KD2YbamWR917wjrTfbEFrBOVZOKJCUYi282e-zJ_wfsHQS1u8s3QRAou148H7oRsc1vV_YdMKoKWCVF7OcaolN7x8XFCD2rpatR9vmy8TUY4b4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-6">
+<span class="font-label-caps text-label-caps text-tertiary uppercase mb-6 block tracking-[0.4em]">Filosofía del Diseño</span>
+<h1 class="font-display-xl text-display-xl text-white mb-8">El Lenguaje de la Estructura</h1>
+<div class="w-24 h-px bg-tertiary mx-auto opacity-50"></div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-50">
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Desplazar</span>
+<span class="material-symbols-outlined text-tertiary animate-bounce">arrow_downward</span>
+</div>
+</section>
+<!-- Scrollytelling Philosophy -->
+<section class="py-section-padding space-y-[240px]">
+<!-- Block 1: Light -->
+<div class="max-w-7xl mx-auto px-10 grid grid-cols-12 items-center gap-gutter">
+<div class="col-span-12 md:col-span-5 space-y-stack-md">
+<span class="font-label-caps text-label-caps text-tertiary">01 — LUZ</span>
+<h2 class="font-headline-lg text-headline-lg text-white">La Escultura de lo Inmaterial</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Entendemos la luz no como un complemento, sino como un material de construcción primordial. Nuestras estructuras actúan como prismas que capturan el paso del tiempo a través del movimiento de las sombras.
+                    </p>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 aspect-[4/5] relative overflow-hidden">
+<img alt="Interior light play" class="w-full h-full object-cover" data-alt="An expansive interior architectural space where rhythmic vertical pillars create a sequence of dramatic shadows on polished limestone floors. Soft, warm sunlight filters through a high, unseen window, highlighting the dust motes and the subtle grain of the stone. The atmosphere is serene and cathedral-like, emphasizing a luxury minimalist design philosophy. The color palette is composed of warm grays, deep blacks, and soft amber highlights, conveying a sense of quiet grandeur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsk_d5NpxDRM-TxZNyH3bv0ILQpVMO3wSzEevnxYQ_0HgpiA6b2ZIZsE6hh-Xs82u1yiUvdKdWSEV5bOnLOhK1XklvPLohLPcYGmIOO-uzbszpSw8vxrflt7NHgW4bIzCb3o60fxfSpsuIxbYZMPdM36CdJohjG0Z9YszTdnB16Zx6wDntSenXAnoop-wKa97mbpok-XnnQnwzVydu6MlM3Z3ITgwtC4qqnI2aoFad5inDZdTdaD3V3_rexHQsLqvotXEAkg0frBc"/>
+</div>
+</div>
+<!-- Block 2: Space -->
+<div class="max-w-7xl mx-auto px-10 grid grid-cols-12 items-center gap-gutter">
+<div class="col-span-12 md:col-span-6 order-2 md:order-1 aspect-[16/9] relative overflow-hidden">
+<img alt="Expansive Space" class="w-full h-full object-cover" data-alt="A wide-angle architectural shot of an open-plan living area featuring massive floor-to-ceiling glass walls that blur the line between interior luxury and the natural landscape. The room is characterized by double-height ceilings and a minimalist steel staircase that seems to float in mid-air. The lighting is sophisticated and integrated, casting a soft glow over clean-lined designer furniture. The entire scene is rendered in a deep charcoal and cool gray palette with subtle metallic accents, embodying modern structural excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3YRnC44IKmIeVZDX3nj7PbeE15MAw5Al6eVNR6DkOeDprZqZxCsU2ell3c7pkz0nf44ou4Ym6LXnOPiosiOH9gbVbE-DwoIlKjjZFdFiSfOrKGIeEtbep8E_Bgpk6HwcmSXw0U4mkw6xCVw3FF0WLTEsVO5mVmLYT9mXJUOUl9vtxhRGCMhJ0AtrEruuYCO1aHHRelxjLuUOHbnH1qXE1rfuw7PacXZ2GZZDLH5soCuh5813HBDAGB04fTB-9MumTrAec213ZGho"/>
+</div>
+<div class="col-span-12 md:col-span-5 md:col-start-8 space-y-stack-md order-1 md:order-2">
+<span class="font-label-caps text-label-caps text-tertiary">02 — ESPACIO</span>
+<h2 class="font-headline-lg text-headline-lg text-white">Fluidez Sin Fronteras</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Diseñamos el vacío. La transición entre el interior y el exterior es una coreografía de transparencia, donde el límite físico desaparece para dar paso a la libertad del horizonte.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Materiality Grid -->
+<section class="bg-surface-container py-section-padding">
+<div class="max-w-7xl mx-auto px-10">
+<div class="mb-20">
+<span class="font-label-caps text-label-caps text-tertiary uppercase mb-4 block">Materialidad</span>
+<h2 class="font-headline-lg text-headline-lg text-white">La Verdad de la Materia</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Material 1 -->
+<div class="group cursor-default">
+<div class="aspect-square overflow-hidden mb-6 border border-white/5">
+<img alt="Italian Marble" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" data-alt="A close-up, high-definition texture shot of premium Italian Calacatta marble, showcasing its distinctive bold grey veining against a pristine white background. The surface has a soft satin finish that reflects a gentle, diffuse light. The composition is artistic and abstract, highlighting the natural geological patterns. The visual style is ultra-luxurious and clean, integrated into a dark-themed UI that emphasizes high-end property materials and architectural sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHi50l9I5gTrQfeGByS_I0cgXa2Ilil-nNL_7I7-PoBN0hDLg4KwH3QKez8tvm8BXFPOj9vVPn0i_iKEDOo2Wn26VNzugyhciHQexXdxvAtbJAABCRmjDWk-mDlYdfRLcuJOmLRxPCirGmqiMRATQY5Eh3YljA33GcPLoRhOyt9V_5iocAdqILME5oZLJ38tU0b9i8pXvmqpHQEBV-9OZdh5knwEtJrq0P1fl9hqQeRV3O5Rs2wfZr8W1FanyU14dqF_26Cf3qRQ0"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Mármol Italiano</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Veteado seleccionado manualmente de las canteras de Carrara para superficies de contacto eterno.</p>
+</div>
+<!-- Material 2 -->
+<div class="group cursor-default">
+<div class="aspect-square overflow-hidden mb-6 border border-white/5">
+<img alt="Sustainable Timber" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" data-alt="A macro photograph of sustainable charred cedar wood, also known as Shou Sugi Ban, displaying its rich, blackened texture and deep cracks. The light grazes the surface, revealing iridescent silver and charcoal tones within the burnt grain. The aesthetic is organic yet highly modern, symbolizing sustainable luxury and resilience. The shot is framed to show the intricate detail of the carbonized wood, creating a striking contrast against a dark, minimal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIXuij95SGrHftsJTD3NIBm-NE9u2riOaiJh5QtjW7duEJ6nfgoe47EoOoe1H9KO8x0f-d_3JmomOtbfYHp2GxgXZYFCUbCG4YPJUjtLrqSsIWyKcpIwFN5A8sek2PxfINYYLqI61DYe1N3KcU33_JBKqtQyIhlxa2cj_LJeBNHr07pXR1CqoJJoD5JTRUlgJI1ywS7gEWmv1ddGK6H5BsXXd582nXyoA2ENyqkVMf9Y5DuC6gd8pEO9iJFEVDmkt_lwn-3OTwJeE"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Madera Carbonizada</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Madera de cedro tratada con la técnica ancestral Shou Sugi Ban para una durabilidad orgánica única.</p>
+</div>
+<!-- Material 3 -->
+<div class="group cursor-default">
+<div class="aspect-square overflow-hidden mb-6 border border-white/5">
+<img alt="Smart Glass" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" data-alt="A sophisticated detail shot of structural glass panels with integrated smart-tinting technology. The image shows the edge of a massive glass sheet where the light refracts into a soft cyan glow. In the background, a sunset is visible through the partially tinted pane, creating a dreamlike, hazy atmosphere. The composition emphasizes technological precision and modern engineering, presented with a high-end architectural photography aesthetic that blends seamlessly into a luxury real estate digital experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO48bkJDGHC11fVeh47eMdvr-l4G4I6GgZ8FSforFP8Vvk2G-r2OjZW9lKpBN0JVKXPVlCArxN9FNvzKZQzZ5lELcb7beVo_zuaom-oI7F7V_D3kuVXUcFtIr7H6kjkrkF69_NOR0diDbr9PkM9g5Uc2EeVHtzraV63MjqtuGI8K4sa2hoWcYMo8su4HM9QGpi-fZ5fpeR2QQdbjAre4pO3drAX8_5-jvuSIDLyimJcsuvBReCHQHzkvW3xEqyQa2ur6wHGsyD7yQ"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Cristal Inteligente</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sistemas de vidrio estructural con control térmico y opacidad dinámica para máxima privacidad.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Details (Bento Grid) -->
+<section class="py-section-padding">
+<div class="max-w-7xl mx-auto px-10">
+<div class="text-center mb-20">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-4">Detalles de Autor</span>
+<h2 class="font-headline-lg text-headline-lg text-white">La Perfección en lo Particular</h2>
+</div>
+<div class="grid grid-cols-12 gap-8 h-[800px]">
+<div class="col-span-12 md:col-span-8 relative overflow-hidden group">
+<img alt="Cantilever Pool" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" data-alt="A breathtaking architectural shot of a cantilevered infinity pool extending out from a minimalist concrete residence over a coastal cliff. The crystal-clear water reflects a deep blue sky, while the underside of the pool reveals raw, textured concrete. The lighting is that of the golden hour, casting long, dramatic shadows and a warm glow over the entire scene. This image represents the pinnacle of structural engineering and luxury living, captured with professional architectural photography standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMwoRnvcqGOkoD-cZusDqQKivmzHOxL0oWYS5yK0xQbodIEIpiWj27xFlSERYn0fkFOf0IgJxzLQSYCCyJFW6Iqlg8EtmGGIbOG_zZDr5vsPfB-v1ZCfjGbBrLjCCZJfwDDuXSCqjrnF31AdE80OgTHKOWsYAH_KQK09Bd8YA-vcT8FZvkge_qMhbp3QjkYl5NNKjy5i70RrGi3w2zt14hp2qdCCDu--I-Bupiq6kxImSAhNwPjJiq1luWwwywxlk_bF8w5qtM-tk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-12">
+<span class="font-label-caps text-xs text-tertiary mb-2">Ingeniería</span>
+<h4 class="font-headline-md text-white">Piscinas en Voladizo</h4>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 relative overflow-hidden group">
+<img alt="Double height" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" data-alt="An interior perspective of a monumental double-height ceiling in a modern architectural residence. The shot looks upwards, revealing a complex arrangement of skylights and exposed structural beams. The interplay of light and geometry creates a sense of vast, airy space. The materials are a mix of white plaster, natural oak, and black steel. The overall atmosphere is one of sophisticated luxury and intellectual design, rendered in high-contrast architectural style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm8tdoTm_EQWKjYyHTWbrupk4JSNkIfbRG69TAgTG8o6nOTOEbGSORaAYDzevUY8E0fa4eeCHJmObPmxPwvQMJP6_GqNmaxWfcGTljAUgKXvQJXTnNzUsi8txh3KcDsAJxOuytuCjRLZNnaE589HzfuSDj5-EbgxsxdukQXAooddxuNeeTrSBl5LWAykMelMzbFz-1vyRid4ZAuIosi8Tn6ovm9LS7NoqZqcaH718PqXjmPllWP5BmR-SWpGaga41h_MKN9KeaqPY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-12">
+<span class="font-label-caps text-xs text-tertiary mb-2">Volumen</span>
+<h4 class="font-headline-md text-white">Dobles Alturas</h4>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 relative overflow-hidden group">
+<img alt="Glass details" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" data-alt="A focused architectural detail of floor-to-ceiling glass corner junctions where the frames are almost invisible. The shot highlights the seamless transition between a luxury interior and a lush, manicured garden. The glass is flawless, reflecting the surrounding nature with crystal clarity. The minimal black frames provide a sharp geometric contrast. The lighting is bright and natural, emphasizing the transparency and modern technical precision of the structure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd1zTP7_pHnPptySR22sPcTc0dqSKXwVRBBWnSDeLZIwZ-xw_XvPgVJuV629-eAuPVTrjNANqC4khK7NrPnbdvHjbR7ymF2QZKl-6kFlXx3LOx90Emf5aLnJtnTh6S_97ixCIBgZCGN89_2QeByxfWvfHJZLVkHsCa9JuXFml7sop38pm5zhAAKggf04zht5BCDSMf-iba2SJGUPsdud-ZH4Y8dV0hS41qJNVyYzXMZZnVuGfbyhFrNLJbhquAQyzkhxiQom5tEQc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-12">
+<span class="font-label-caps text-xs text-tertiary mb-2">Transparencia</span>
+<h4 class="font-headline-md text-white">Encuentros en Vidrio</h4>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8 relative overflow-hidden group">
+<img alt="Facade detail" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" data-alt="An abstract detail of a modern residential facade featuring a rhythmic pattern of metal louvers and textured concrete panels. The late afternoon sun creates a repetitive shadow pattern that is highly graphic and architectural. The image focuses on the quality of construction and the dialogue between different industrial materials. The color palette is composed of cool blues and warm grays, consistent with a high-end dark mode digital aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNw99zdH-X4GaUyat2oQaazBu6XFTMEVbKNiVnDOowNAb44nDINWgWw4JStCDI7d9ObphkZ0fEn0BPC0qudteo50GoYnGhLRCQLtfUhCII1dmYHiYeQH-aXMbcBICbFiTQ3kqemUbGe5omy-rabj164GDCa4FebTZB8ljY4eGgeha3Bpd-t_TIu_5qwHatvv0zhKNGLYWBOVaepL7RJkIApDsnqKyRczYUJIaWadOMu3r1ujXLcqLCyGNjajpB01qXc0YSPzsnaxg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-12">
+<span class="font-label-caps text-xs text-tertiary mb-2">Piel</span>
+<h4 class="font-headline-md text-white">Fachadas Dinámicas</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Transition -->
+<section class="relative py-section-padding overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-neutral-900"></div>
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-tertiary via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-10 text-center">
+<h2 class="font-display-xl text-[64px] leading-tight text-white mb-12">De la Visión a la <span class="text-tertiary italic">Realidad</span></h2>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a class="px-12 py-5 bg-tertiary text-on-tertiary-fixed font-label-caps text-label-caps uppercase hover:bg-white transition-all duration-500" href="#">Explorar Proyectos</a>
+<a class="px-12 py-5 border border-white/20 text-white font-label-caps text-label-caps uppercase hover:bg-white hover:text-black transition-all duration-500" href="#">Contactar Asesor</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full py-20 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-serif text-lg font-semibold text-white">Gerandy Diaz Architectural Advisor</div>
+<div class="flex gap-8">
+<a class="font-serif text-sm text-neutral-500 hover:text-white transition-all duration-300" href="#">Instagram</a>
+<a class="font-serif text-sm text-neutral-500 hover:text-white transition-all duration-300" href="#">LinkedIn</a>
+<a class="font-serif text-sm text-neutral-500 hover:text-white transition-all duration-300" href="#">Legal</a>
+<a class="font-serif text-sm text-neutral-500 hover:text-white transition-all duration-300" href="#">Privacy</a>
+</div>
+<div class="font-serif text-sm text-neutral-400">
+                © 2024 Gerandy Diaz Architectural Advisor. All rights reserved.
+            </div>
+</div>
+</footer>
+<script src="../site-router.js"></script>
+</body></html>

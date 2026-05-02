@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Space+Grotesk:wght@300;600&amp;family=Manrope:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#1e2021",
+                    "primary-fixed": "#e2e2e6",
+                    "tertiary-container": "#1d1200",
+                    "secondary-container": "#334b60",
+                    "on-tertiary": "#412d00",
+                    "on-surface": "#e2e2e3",
+                    "on-error": "#690005",
+                    "secondary": "#b0c9e3",
+                    "on-secondary-fixed-variant": "#31495e",
+                    "outline-variant": "#45474a",
+                    "surface-container-high": "#282a2b",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#e2e2e3",
+                    "on-surface-variant": "#c6c6ca",
+                    "surface": "#121415",
+                    "surface-variant": "#333536",
+                    "surface-container-lowest": "#0c0e0f",
+                    "surface-tint": "#c6c6ca",
+                    "primary-container": "#121417",
+                    "surface-container-highest": "#333536",
+                    "on-tertiary-fixed": "#261900",
+                    "surface-dim": "#121415",
+                    "inverse-primary": "#5d5e62",
+                    "on-primary-container": "#7d7e82",
+                    "on-primary": "#2f3034",
+                    "surface-container-low": "#1a1c1d",
+                    "on-primary-fixed-variant": "#45474a",
+                    "inverse-on-surface": "#2f3132",
+                    "error": "#ffb4ab",
+                    "primary": "#c6c6ca",
+                    "secondary-fixed-dim": "#b0c9e3",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-tertiary-container": "#9b7937",
+                    "tertiary": "#e9c176",
+                    "primary-fixed-dim": "#c6c6ca",
+                    "outline": "#8f9094",
+                    "surface-bright": "#38393a",
+                    "on-secondary-container": "#a2bbd4",
+                    "inverse-surface": "#e2e2e3",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "on-primary-fixed": "#1a1c1f",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-secondary": "#1a3347",
+                    "on-secondary-fixed": "#011d31",
+                    "background": "#121415",
+                    "secondary-fixed": "#cce5ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "120px",
+                    "container-max": "1440px",
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "stack-sm": "16px",
+                    "stack-md": "40px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "label-caps": ["Space Grotesk"],
+                    "body-md": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+        }
+        .text-etched {
+            text-shadow: 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-[30px] dark:bg-[#121417]/40 border-b border-white/5 shadow-2xl shadow-black/40">
+<div class="flex justify-between items-center px-12 py-8 w-full">
+<div class="text-xl font-bold tracking-[0.2em] text-zinc-100 font-headline-lg">GERANDY DIAZ</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-serif tracking-widest uppercase text-xs text-zinc-400 hover:text-zinc-100 transition-all duration-500 ease-out" href="#">Portfolio</a>
+<a class="font-serif tracking-widest uppercase text-xs text-zinc-400 hover:text-zinc-100 transition-all duration-500 ease-out" href="#">Narratives</a>
+<a class="font-serif tracking-widest uppercase text-xs text-amber-500 border-b border-amber-500 pb-1" href="#">Advisory</a>
+<a class="font-serif tracking-widest uppercase text-xs text-zinc-400 hover:text-zinc-100 transition-all duration-500 ease-out" href="#">Contact</a>
+</div>
+<button class="bg-tertiary text-on-tertiary px-8 py-3 font-label-caps text-label-caps tracking-widest uppercase hover:bg-tertiary-fixed transition-all duration-600 ease-[cubic-bezier(0.4,0,0.2,1)]">
+                Private Showing
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-end pb-32 px-12 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A cinematic, low-angle shot of a sharp-featured luxury real estate advisor standing in front of a brutalist concrete mansion at dusk. The lighting is dramatic and moody, with warm amber glow emanating from the floor-to-ceiling windows of the property, contrasting against the deep charcoal sky. The overall aesthetic is architectural, high-end, and authoritative, reflecting a sophisticated dark-mode palette with subtle gold highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdKSHR1jQ1vkznAVq3fbZwJkI8O-CL1b4jpDql2L0zd9U4c1MAPXr9_qJEDHQ2nO6E7Gp4lXBz6VNkftYNmd3wb-e11sjjjnC5GyccpijIO6hsTeh855TBizlXDUKGUduiLDdQaIvKivNT_0DNeXEMu7SeiOI2Qiy3AjrR7FKhMh5bY6soZY1bF-7DBRck_B_GvXbR6Ok3P9aCwGRY2VpcAbpJKsXRj9DKgl9IIk4hNJrv4BihOoE_y9hDEral7MKeDdFHywsGX_Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto w-full">
+<span class="font-label-caps text-label-caps text-tertiary mb-6 block">SOBRE EL ASESOR</span>
+<h1 class="font-display-xl text-display-xl max-w-4xl leading-none">
+                    The Architect of Transactions.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-8 max-w-xl">
+                    Gerandy Diaz redefine la consultoría inmobiliaria como una disciplina de precisión, donde cada activo es una narrativa de valor y cada cierre un hito arquitectónico.
+                </p>
+</div>
+</section>
+<!-- A Decade of Precision -->
+<section class="py-[120px] px-12 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-5 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-tertiary mb-4">LEGADO</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">Una Década de Precisión</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Con más de diez años navegando las corrientes más complejas del mercado de lujo, Gerandy ha perfeccionado un método que trasciende la simple intermediación. Su enfoque se basa en la analítica rigurosa y la comprensión profunda de la ingeniería financiera aplicada a bienes raíces.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Cada transacción es tratada con la minuciosidad de un plano arquitectónico, asegurando que la estructura del acuerdo sea tan sólida como los cimientos de las propiedades que representa.
+                    </p>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-8">
+<div class="relative aspect-[3/4] border border-outline-variant/20 p-4">
+<img class="w-full h-full object-cover" data-alt="A close-up, high-contrast black and white photograph of architectural blueprints resting on a dark marble surface alongside a gold luxury watch and a fountain pen. The composition is minimalist and precise, emphasizing texture and craftsmanship. The lighting is directional, creating deep shadows that highlight the paper's texture and the metallic sheen of the pen, fitting the architectural narrative style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIZ4PJ9njike6VMtb40m8jPuYGOakQwn0dkmhD5xYuKL63PhYS2u9IxI_rOoiiYGRglusBi584fqxNwhU7E_8-5NOgbxsAvmz7vJwvPqDt4MFb4ZNG8XfwfprNLX-mTJjnvVPWIsoyv-lcUQsWN9ujM-ArI1C4Gn5GgnKMFneaY8x7VFivtFas_KaMo7WYcEDTQ5pusAH9IVELJ7C4_A_lInVSykRxfK6wArUeUR_E53Xzb4anUX6og9rVYs1n6O446d5--yvMf9A"/>
+<div class="absolute -bottom-8 -left-8 bg-surface-container p-12 shadow-2xl">
+<div class="font-display-xl text-display-xl text-tertiary leading-none">10+</div>
+<div class="font-label-caps text-label-caps mt-2">AÑOS DE MAESTRÍA</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Philosophy -->
+<section class="py-[120px] px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<span class="font-label-caps text-label-caps text-tertiary mb-4 block">VALORES FUNDAMENTALES</span>
+<h2 class="font-headline-lg text-headline-lg">La Filosofía del Asesoramiento</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="group">
+<div class="w-12 h-12 border border-tertiary/30 flex items-center justify-center mb-8 group-hover:bg-tertiary transition-all duration-500">
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-tertiary">lock_open</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Discreción</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            El silencio es el activo más valioso en el mercado de ultra-lujo. Protegemos la identidad y los intereses de nuestros clientes con protocolos de confidencialidad absoluta.
+                        </p>
+</div>
+<div class="group">
+<div class="w-12 h-12 border border-tertiary/30 flex items-center justify-center mb-8 group-hover:bg-tertiary transition-all duration-500">
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-tertiary">architecture</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Excelencia Técnica</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            No solo vendemos espacios; analizamos estructuras, materiales y potencial de apreciación. Nuestra asesoría está respaldada por un conocimiento técnico superior.
+                        </p>
+</div>
+<div class="group">
+<div class="w-12 h-12 border border-tertiary/30 flex items-center justify-center mb-8 group-hover:bg-tertiary transition-all duration-500">
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-tertiary">inventory_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Inventario Curado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Filtramos el mercado para presentar solo activos que cumplen con los estándares más exigentes de diseño, ubicación y viabilidad de inversión.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- A Global Perspective -->
+<section class="relative py-[160px] overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="An ethereal, wide-angle shot of a modern glass skyscraper reflecting a dramatic sunset over a global metropolis like London or Dubai. The image is filtered with a deep navy and amber tint, emphasizing the interplay between glass, light, and steel. The mood is expansive and strategic, suggesting a high-level global perspective and international connectivity within the luxury real estate sector." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZd2-rqHDjRX70TCIIXqSdj74eTPw3sv9WTpw26krQEM6dI-t4FXzvrqGbN3E-Xm8ZwoLcXXaBriw4jMKIeYq-295LyrpsMoyVDmK8Is3A1aQGbAWnWdfGXh4xBIqG7n-mWlAPecU-CoYpSwHXFIH6QESsG2OgXMCmDOivXwk2N35VB4Vu_my-9CripyVYwc7vPp5iAbfEo-3h_Bxuu7jSeFvSJAir64kPkBFO0og5wGwVoH0Gx5SVlPdfYPsOT2mkDjwTa0QksuA"/>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-12 text-center">
+<h2 class="font-display-xl text-display-xl mb-12">Una Perspectiva Global</h2>
+<div class="w-24 h-1 bg-tertiary mx-auto mb-12"></div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                    El capital no conoce fronteras, y nuestra visión tampoco. Con una red estratégica que conecta los epicentros del lujo mundial — desde Madrid y Miami hasta Dubai — Gerandy Diaz ofrece a sus clientes un acceso sin precedentes a oportunidades de inversión globales, respaldadas por un análisis macroeconómico detallado.
+                </p>
+</div>
+</section>
+<!-- Beyond the Portfolio -->
+<section class="py-[120px] px-12 bg-surface-container-highest/20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2">
+<img class="w-full aspect-square object-cover grayscale opacity-80 border border-white/5" data-alt="A portrait of a sophisticated man looking out of a massive window of a high-rise office at a city skyline during the blue hour. Only his silhouette and the reflection of the city lights are visible. The atmosphere is contemplative and visionary, suggesting a focus on the future and long-term legacy. The composition uses the window frames as leading lines, consistent with the architectural narrative style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFMWrExHE5c5NImRKSlPIYradmgXH5HG7tvfA4neH15buRFiF_j6mFaQk9CcbauS2q9ID0vFWmwXYdIGEE3SvdR9hMfGlEWDkC76pnYu4uSN2_Fl3AbF-tJForGzdoNeyW1kqeKT7K8zbDhqt9JH4MiCLIUtfucgL_B_vGygzefNgJbeR3PmvqGsHVLpvzvjatFPNe1_oV1iTG6tHxHJMeQ6cO4Sn8vdifl9o-xTsXDa745RoeLnNJTbh0aV5eDY_DtvVvZI9jvrM"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-caps text-label-caps text-tertiary mb-6 block">CONCLUSIÓN</span>
+<h2 class="font-headline-lg text-headline-lg mb-8 italic">Beyond the Portfolio.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12 italic">
+                        "Mi compromiso no termina con la firma de un contrato. Construyo relaciones basadas en la confianza técnica y el éxito sostenido. Para mí, el sector inmobiliario es el arte de materializar el legado de mis clientes en el tejido urbano del mundo."
+                    </p>
+<div class="flex items-center gap-6">
+<div class="w-16 h-[1px] bg-tertiary"></div>
+<div class="font-label-caps text-label-caps tracking-[0.3em]">GERANDY DIAZ</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t border-zinc-800/50 bg-[#121417] dark:bg-[#0a0a0a]">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-20 px-8 gap-12">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-bold text-zinc-100 tracking-tighter uppercase font-headline-lg">GERANDY DIAZ</div>
+<p class="font-serif text-[10px] tracking-widest uppercase opacity-60 text-zinc-500 max-w-xs text-center md:text-left">
+                    © 2024 Gerandy Diaz. Licensed Luxury Advisor. Architectural imagery used with permission.
+                </p>
+</div>
+<div class="flex gap-8">
+<a class="font-serif text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-opacity duration-300" href="#">Licensing</a>
+<a class="font-serif text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-serif text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-opacity duration-300" href="#">Terms</a>
+<a class="font-serif text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-opacity duration-300" href="#">Accessibility</a>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-amber-500 cursor-pointer hover:opacity-100 transition-opacity duration-300 opacity-60">share</span>
+<span class="material-symbols-outlined text-amber-500 cursor-pointer hover:opacity-100 transition-opacity duration-300 opacity-60">mail</span>
+<span class="material-symbols-outlined text-amber-500 cursor-pointer hover:opacity-100 transition-opacity duration-300 opacity-60">call</span>
+</div>
+</div>
+</footer>
+<script src="../site-router.js"></script>
+</body></html>

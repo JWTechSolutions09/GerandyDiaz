@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#121417",
+                    "surface-container-highest": "#333536",
+                    "surface-bright": "#38393a",
+                    "surface-container-lowest": "#0c0e0f",
+                    "secondary-container": "#334b60",
+                    "outline-variant": "#45474a",
+                    "on-surface-variant": "#c6c6ca",
+                    "on-error": "#690005",
+                    "primary": "#c6c6ca",
+                    "on-tertiary": "#412d00",
+                    "secondary-fixed-dim": "#b0c9e3",
+                    "primary-fixed": "#e2e2e6",
+                    "outline": "#8f9094",
+                    "surface-variant": "#333536",
+                    "primary-fixed-dim": "#c6c6ca",
+                    "error": "#ffb4ab",
+                    "background": "#121415",
+                    "surface-dim": "#121415",
+                    "inverse-surface": "#e2e2e3",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#2f3132",
+                    "on-tertiary-fixed": "#261900",
+                    "on-secondary": "#1a3347",
+                    "on-secondary-fixed-variant": "#31495e",
+                    "surface-tint": "#c6c6ca",
+                    "on-primary-container": "#7d7e82",
+                    "on-background": "#e2e2e3",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-primary": "#2f3034",
+                    "on-primary-fixed": "#1a1c1f",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "on-surface": "#e2e2e3",
+                    "on-primary-fixed-variant": "#45474a",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#282a2b",
+                    "surface": "#121415",
+                    "surface-container": "#1e2021",
+                    "secondary": "#b0c9e3",
+                    "inverse-primary": "#5d5e62",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-secondary-fixed": "#011d31",
+                    "on-secondary-container": "#a2bbd4",
+                    "on-tertiary-container": "#9b7937",
+                    "tertiary": "#e9c176",
+                    "surface-container-low": "#1a1c1d",
+                    "tertiary-container": "#1d1200",
+                    "secondary-fixed": "#cce5ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "section-padding": "120px",
+                    "container-max": "1440px",
+                    "stack-sm": "16px",
+                    "stack-md": "40px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "display-xl": ["Noto Serif"],
+                    "body-md": ["Manrope"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-lg": ["Noto Serif"],
+                    "body-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .property-card:hover .details-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#121417]/40 backdrop-blur-[30px] dark:bg-[#121417]/40 border-b border-white/5 transition-all duration-600 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto w-full">
+<div class="text-xl font-bold tracking-tighter text-white dark:text-white">Gerandy Diaz</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Narrative</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-amber-400 border-b border-amber-400 pb-1" href="#">Showcase</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Architectural</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">About</a>
+<a class="font-noto-serif tracking-[0.2em] text-xs uppercase text-white/60 hover:text-white transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="bg-tertiary text-on-tertiary px-6 py-2 text-label-caps uppercase tracking-widest hover:bg-white transition-colors duration-300">
+                Book Consultation
+            </button>
+</div>
+</nav>
+<main class="pt-[120px]">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-8 py-[120px] text-center">
+<span class="font-label-caps text-tertiary uppercase tracking-[0.3em] mb-4 block">Exclusividad Digital</span>
+<h1 class="font-display-xl text-display-xl mb-6 text-white uppercase">The Showcase</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Una curaduría de excelencia arquitectónica donde la permanencia de los bienes raíces de alta gama se fusiona con la precisión técnica moderna.
+            </p>
+</section>
+<!-- Filter Bar -->
+<section class="max-w-[1440px] mx-auto px-8 mb-16">
+<div class="flex flex-wrap justify-center gap-12 border-y border-white/5 py-8">
+<button class="font-label-caps text-tertiary tracking-widest uppercase relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[1px] after:bg-tertiary">All Projects</button>
+<button class="font-label-caps text-on-surface-variant hover:text-white tracking-widest uppercase transition-colors">Residential</button>
+<button class="font-label-caps text-on-surface-variant hover:text-white tracking-widest uppercase transition-colors">Commercial</button>
+<button class="font-label-caps text-on-surface-variant hover:text-white tracking-widest uppercase transition-colors">Planned</button>
+</div>
+</section>
+<!-- Main Gallery Grid -->
+<section class="max-w-[1440px] mx-auto px-8 mb-[120px]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Card 1 -->
+<div class="md:col-span-8 group relative overflow-hidden property-card aspect-[16/9]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A futuristic luxury villa at dusk, featuring expansive floor-to-ceiling glass walls that reveal a warm, minimalist interior. The architecture uses clean horizontal lines and cantilevered concrete slabs, set against a backdrop of a deep indigo twilight sky. Soft amber lighting emanates from within the structure, highlighting the sophisticated dark charcoal and slate blue palette of the modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA483tNWQNhSu9OK3VBHysbNNe0rQdMnRckKFDnjRA13Kn01V_bGSeOn9_UT-wIcAJI3Bun4z8ziM1C4IKt3vWYk510kbEVqQa1JuzVBOROav057jLLxIAYhFsUknekE6TB9BaUJc1KROJn66LV4zzY3k8IjiXFtTc8zPvPEpU2hesKV1tZ67F6HUkDC6no6tdkAFjTtt00EvZbDUHfiTBPgaJyn07btyWG7WN2pqqNEDzA8zx1_7PJuydOJBjRtsbZutCi5wpGxZo"/>
+<div class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-12 details-overlay translate-y-4">
+<span class="font-label-caps text-tertiary mb-2">RESIDENCIAL</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Vela de Mar</h3>
+<p class="text-on-surface-variant mb-6 max-w-md">Ubicada en los acantilados de la Costa Brava, esta residencia redefine la transparencia y el lujo minimalista.</p>
+<a class="flex items-center gap-2 font-label-caps text-white uppercase tracking-widest group/link" href="#">
+                            View Details 
+                            <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="md:col-span-4 group relative overflow-hidden property-card aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Detail of a modern architectural staircase made of dark polished basalt and brushed gold railings. The scene is shot with high-key lighting that emphasizes the sharp edges and minimalist geometry. The color scheme is dominated by deep blacks and metallic gold accents, creating an authoritative and luxurious atmosphere within a high-end corporate setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2AMExUryyNkCLilEtBYjf4004ksNH6b-_-Iq1wKfTYCvWZX3FZlPwPe80egb3KFx-pvZNEKTQINeBUbQP1ql-Fde2Rw8JcwWvv-jplj9LpiCktQcovlDM5szOBMbp29ES6Jmr8NAZ7LVgxJDGVUFJfgY4HLVDy1VNtOZdTCtF9LbOWvpIWxDxpBJIa5WZGxOE9IcnhuElkVUvHGINOe2W8KTEGrXMO-G0BisEdgavjKgxw3Tomu5E8off9EzW9By5wwVF2x4P0TI"/>
+<div class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 details-overlay translate-y-4">
+<span class="font-label-caps text-tertiary mb-2">COMERCIAL</span>
+<h3 class="font-headline-md text-white mb-4">The Obsidian Core</h3>
+<a class="flex items-center gap-2 font-label-caps text-white uppercase tracking-widest group/link" href="#">
+                            View Details 
+                            <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section: The Azure Horizon -->
+<section class="relative w-full bg-surface-container-lowest overflow-hidden mb-[120px]">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 h-[700px]">
+<img class="w-full h-full object-cover" data-alt="An ultra-modern infinity pool overlooking a vast oceanic horizon at golden hour. The pool's edge blends seamlessly with the sea, reflecting the brilliant orange and amber hues of the setting sun. Minimalist white lounge chairs are arranged on a dark stone terrace, embodying a serene, cinematic experience of high-tech luxury and natural beauty." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7gWb_v_yVyUXnqRcov9kmcn7RhUtGswnPM3rlwHnADShbaIFRVqDfQF2tozvFmfj7ln2rQDc2aA35A-aeCj29unfvM_40xUwpcwbw6oDXPPDkXrUMES3EgWae1JbqL3q_MzPbHcx1w4Nxjz0kZOcTgX5m3NG4SknKa29soibM2mgy2jci1AC4qqNEeIbYfXBAuMlVhPRfUOIwJ1k_etaPg0sVZhtcA08zHfR53CoK4snY3y-iSFnBz0M4yNb163JRNB4qBbvojqg"/>
+</div>
+<div class="w-full md:w-1/2 p-16 md:p-24 space-y-8">
+<span class="font-label-caps text-tertiary tracking-[0.4em] uppercase">Flagship Project</span>
+<h2 class="font-display-xl text-headline-lg text-white">The Azure Horizon</h2>
+<div class="w-20 h-[1px] bg-tertiary"></div>
+<p class="font-body-lg text-on-surface-variant">
+                        Un manifiesto de diseño orgánico donde el hormigón y el cristal desaparecen ante el azul infinito. Localizado en las Islas Baleares, este proyecto integra tecnología inteligente con materiales locales refinados.
+                    </p>
+<ul class="grid grid-cols-2 gap-8 pt-8">
+<li>
+<p class="font-label-caps text-white uppercase">Superficie</p>
+<p class="text-on-surface-variant">1,200 m²</p>
+</li>
+<li>
+<p class="font-label-caps text-white uppercase">Estado</p>
+<p class="text-on-surface-variant">Completado 2023</p>
+</li>
+</ul>
+<button class="border border-tertiary text-tertiary px-8 py-4 font-label-caps uppercase tracking-widest hover:bg-tertiary hover:text-on-tertiary transition-all duration-500">
+                        Explore Narrative
+                    </button>
+</div>
+</div>
+</section>
+<!-- Gallery Grid Continued -->
+<section class="max-w-[1440px] mx-auto px-8 mb-[120px]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Card 3 -->
+<div class="md:col-span-4 group relative overflow-hidden property-card aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A low-angle shot of a sharp-edged, glass-and-steel skyscraper reaching into a crystal clear sky. The building reflects the surrounding urban landscape with a distorted, artistic flair. The image is styled with a high-contrast dark mode aesthetic, focusing on the rhythmic architectural patterns and the interplay between light and deep shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2LtptWPTdSqG7OkWWSwTvOKIK8tRWijXzG1l56HTCJMxndo8CnctF0f4X1bxH5fQSXaxqDWRcqJO0cVzz1WAObPOojDzvYPOuIiM8Df8s5TFnII9es1fOR_Oo5ybwHefqPOiym-CIHDRsGCvg7LtnECg13bVdCI2SpE2FaHwdvNECPGapk9ZFQY38waJ3M04sqO1SprNT0EC90d1629tROpTq9ul8u9UGNbPE5qi97qGpejMNvwfykp4sJL3hkwaYQsSieOfI8BY"/>
+<div class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 details-overlay translate-y-4">
+<span class="font-label-caps text-tertiary mb-2">PLANNED</span>
+<h3 class="font-headline-md text-white mb-4">Vertical Echo</h3>
+<a class="flex items-center gap-2 font-label-caps text-white uppercase tracking-widest group/link" href="#">
+                            View Details 
+                            <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-8 group relative overflow-hidden property-card aspect-[16/9]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An expansive open-concept luxury office with dark walnut floors and matte black furniture. Large industrial windows offer a view of a rainy city skyline, creating a moody yet sophisticated atmosphere. The interior is punctuated by soft spotlighting and lush green plants, balancing technical precision with a high-touch, human-centric design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARGakemx-0QfXHJLeJng2hBq4nKymxbhxIs85cpvgQtF_CFItJR_6qvzhd7fPklbdOVaFcv2ouVagJWsxmHosxrt9kkAvhVnAwX33Wv08Ub1OmYiT0rxYqGAfdoM74WPj-E74R5gtXZnHfWffe6h5DZ6xK4-1l_fpIObBXKkkpk-JIqWCKUsO1h_d79ZnYtOHOcB2K4GDvMu89WBzeRDRzW01aaZaezVISDyhBp7fG-Jv_Z6G-d6uQfmq6mBKmFubqtvog_z6V33Y"/>
+<div class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-12 details-overlay translate-y-4">
+<span class="font-label-caps text-tertiary mb-2">RESIDENCIAL</span>
+<h3 class="font-headline-md text-white mb-4">The Zenith Loft</h3>
+<p class="text-on-surface-variant mb-6 max-w-md">Redefiniendo el concepto de 'Home Office' en el corazón del distrito financiero de Madrid.</p>
+<a class="flex items-center gap-2 font-label-caps text-white uppercase tracking-widest group/link" href="#">
+                            View Details 
+                            <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-[1440px] mx-auto px-8 py-[120px] text-center border-t border-white/5">
+<h2 class="font-headline-lg text-white mb-8">¿Listo para su próxima inversión?</h2>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-tertiary text-on-tertiary px-12 py-5 font-label-caps uppercase tracking-widest hover:bg-white transition-all">
+                    Solicitar Portafolio Privado
+                </button>
+<button class="border border-outline text-white px-12 py-5 font-label-caps uppercase tracking-widest hover:border-tertiary hover:text-tertiary transition-all">
+                    Agendar Llamada
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#121417] dark:bg-[#121417] w-full border-t border-slate-200/10 transition-all duration-500 ease-in-out">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-[1440px] mx-auto w-full">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-bold text-white uppercase tracking-tighter">Gerandy Diaz</div>
+<p class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500">© 2024 Gerandy Diaz. Digital Architectural Real Estate.</p>
+</div>
+<div class="flex gap-12 mt-8 md:mt-0">
+<a class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500 hover:text-amber-400 transition-colors" href="#">Privacy Policy</a>
+<a class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500 hover:text-amber-400 transition-colors" href="#">Terms of Service</a>
+<a class="font-noto-serif text-[10px] tracking-widest uppercase text-slate-500 hover:text-amber-400 transition-colors" href="#">Licensing</a>
+</div>
+<div class="flex gap-6 mt-8 md:mt-0">
+<a class="text-slate-500 hover:text-amber-400" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-slate-500 hover:text-amber-400" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+<a class="text-slate-500 hover:text-amber-400" href="#"><span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span></a>
+</div>
+</div>
+</footer>
+<script src="../site-router.js"></script>
+</body></html>
