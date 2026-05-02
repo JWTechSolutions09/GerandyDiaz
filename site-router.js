@@ -210,7 +210,7 @@
 
   function setupActiveNavLink() {
     const path = window.location.pathname.toLowerCase();
-    const links = Array.from(document.querySelectorAll('nav a[href="#"]'));
+    const links = Array.from(document.querySelectorAll('nav a'));
     if (!links.length) return;
 
     const activeByPath = [
